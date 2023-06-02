@@ -1,0 +1,32 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Lista de directores</h1>
+
+  <p>Bienvenidos a <em>La lista de directores</em>
+<h2>Dynamic content</h2>
+
+  <p>Estos son los datos de los directores:</p>
+  <ul>
+      <h1 class='list'>List View</h1>
+      <table border="1">
+        <thead>
+            <th>Nombre</th>
+            <th>Fecha de nacimiento</th>
+            <th>Genero</th>
+            <th>País de nacimiento</th>
+        </thead>
+      {% for k in directores  %}
+           <tr>
+               <td>{{k.name}}</td>
+               <td>{{k.fecha}}</td>
+               <td>{{k.genero}}</td>
+               <td>{{k.lugar}}</td>
+           
+           </tr>
+           
+           {% endfor %}
+       </table>
+  </ul>
+
+{% endblock %}

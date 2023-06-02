@@ -1,0 +1,32 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Lista de películas</h1>
+
+  <p>Bienvenidos a <em>La lista de películas</em>
+<h2>Dynamic content</h2>
+
+  <p>Estos son los datos de las películas:</p>
+  <ul>
+      <h1 class='list'>List View</h1>
+      <table border="1">
+        <thead>
+            <th>Nombre</th>
+            <th>Director</th>
+            <th>Fecha de lanzamiento</th>
+            <th>Descripcion</th>
+        </thead>
+      {% for k in peliculas  %}
+           <tr>
+               <td>{{k.name}}</td>
+               <td>{{k.director}}</td>
+               <td>{{k.fecha}}</td>
+               <td>{{k.descripcion}}</td>
+           
+           </tr>
+           
+           {% endfor %}
+       </table>
+  </ul>
+
+{% endblock %}

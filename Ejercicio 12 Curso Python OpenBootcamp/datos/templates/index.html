@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Catalogo de directores y películas</h1>
+
+  <p>Bienvenidos al <em>Catalogo de directores</em>, pequeño ejercicio de sitio web para OpenBootcamp
+<h2>Dynamic content</h2>
+
+  <p>El catalogo tiene los siguientes directores y películas:</p>
+  <ul>
+    <li><strong>Directores:</strong> {{ num_directores }}</li>
+    <li><strong>Peliculas:</strong> {{ num_peliculas }}</li>
+  </ul>
+
+{% endblock %}
